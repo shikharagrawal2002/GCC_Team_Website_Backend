@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && netlify-lambda serve src",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && netlify-lambda build src"
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && netlify-lambda serve src",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
