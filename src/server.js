@@ -8,6 +8,8 @@ const router = express.Router();
 //posts Model
 const Posts = require("../models/Posts");
 
+const app = express();
+
 // @routes GET api/posts
 // @desc GET all posts
 router.get("/", async (req, res) => {
@@ -23,8 +25,6 @@ router.get("/", async (req, res) => {
 // Routes
 // const postsRoutes = require('./Routes/api/posts');
 
-const app = express();
-
 // Connect to MongoDB
 mongoose
   .connect(MONGO_URI, {
@@ -35,6 +35,6 @@ mongoose
   .catch((err) => console.log(err));
 
 // Use routes
-app.use("/", router);
+app.use("/.netlify/functions/server", router);
 
 module.exports.handler = serverless(app);
