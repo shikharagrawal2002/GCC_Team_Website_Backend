@@ -2,7 +2,7 @@
   "name": "gcc_team_website_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "netlify-lambda serve src",
     "build": "netlify-lambda build src"
