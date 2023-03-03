@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const serverless = require("serverless-http");
 const { MONGO_URI } = require("../config");
 
-// const { model } = require('mongoose');
 const router = express.Router();
 
 //posts Model
@@ -36,6 +35,6 @@ mongoose
   .catch((err) => console.log(err));
 
 // Use routes
-app.use("/.netlify/functions/server", router);
+app.use("/", router);
 
 module.exports.handler = serverless(app);

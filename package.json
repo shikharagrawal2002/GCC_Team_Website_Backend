@@ -2,18 +2,18 @@
   "name": "gcc_team_website_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "start": "netlify-lambda serve src",
-    "build": "netlify-lambda build src"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "mongodb": "^5.1.0",
     "mongoose": "^7.0.0",
-    "netlify-lambda": "^2.0.16",
+    "nodemon": "^2.0.21",
     "serverless-http": "^3.1.1"
   }
 }
